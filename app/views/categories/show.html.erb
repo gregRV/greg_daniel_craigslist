@@ -1,0 +1,11 @@
+<h1>Welcome to the <%= @category.name %> page!</h1>
+
+<%= link_to "new post", new_category_post_path(@category, @post) %>
+<br><br>
+
+<% @category.posts.each do |post| %>
+  <%= link_to post.title, category_post_path(@category, post) %>
+  <%= post.description %>
+  <%= post.price %>
+  <br>
+<% end %>

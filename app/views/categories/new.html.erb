@@ -1,0 +1,8 @@
+<h1>Create a new Category</h1>
+
+<%= form_for @category do |f| %>
+  <!-- because we have @category, it prepends 'category' to [:name] -->
+  <%= f.label :name %>
+  <%= f.text_field :name, :placeholder => "Your name here" %>
+  <%= f.submit "Create!" %>
+<% end %>
